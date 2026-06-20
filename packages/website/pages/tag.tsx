@@ -19,7 +19,7 @@ const TagPage = (props: TagPageProps) => {
       title="标签"
       sideBar={<AuthorCard option={props.authorCardProps}></AuthorCard>}
     >
-      <div className="bg-white card-shadow dark:bg-dark dark:card-shadow-dark py-4 px-8 md:py-6 md:px-8">
+      <div className="bg-white card-shadow page-card dark:bg-dark dark:card-shadow-dark py-4 px-8 md:py-6 md:px-8">
         <div className="text-lg md:text-xl text-gray-700 dark:text-dark">
           标签
         </div>

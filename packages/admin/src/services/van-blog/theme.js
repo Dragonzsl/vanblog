@@ -21,7 +21,6 @@ export const decodeAutoTheme = () => {
   }
 };
 export const mapTheme = (theme) => {
-  // 把自己定义的主题变成系统的
   if (theme == 'auto') {
     return decodeAutoTheme();
   } else {
