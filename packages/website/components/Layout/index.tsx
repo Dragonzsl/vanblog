@@ -1,6 +1,7 @@
 import Head from "next/head";
 import BackToTopBtn from "../BackToTop";
 import NavBar from "../NavBar";
+import BubbleBg from "../BubbleBg";
 import { useEffect, useRef, useState } from "react";
 import BaiduAnalysis from "../BaiduAnalysis";
 import GaAnalysis from "../gaAnalysis";
@@ -62,6 +63,7 @@ export default function (props: {
         process.env.NODE_ENV != "development" && (
           <GaAnalysis id={props.option.gaAnalysisID}></GaAnalysis>
         )}
+      <BubbleBg />
       <ThemeContext.Provider
         value={{
           setTheme,
@@ -97,7 +99,7 @@ export default function (props: {
             menus={props.option.menus}
           />
 
-          <div className=" mx-auto  lg:px-6  md:py-4 py-2 px-2 md:px-4  text-gray-700 ">
+          <div className=" mx-auto  lg:px-6  md:py-4 py-2 px-2 md:px-4 " style={{ color: 'var(--text-primary)' }}>
             <LayoutBody children={props.children} sideBar={props.sideBar} />
             <Footer
               ipcHref={props.option.ipcHref}

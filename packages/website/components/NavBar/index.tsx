@@ -29,6 +29,7 @@ export default function (props: {
 }) {
   const [showSearch, setShowSearch] = useState(false);
   const [headroom, setHeadroom] = useState<Headroom>();
+  const [scrolled, setScrolled] = useState(false);
   const { theme } = useContext(ThemeContext);
 
   const picUrl = useMemo(() => {
@@ -49,6 +50,15 @@ export default function (props: {
     };
   }, [headroom, setHeadroom]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 56);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <SearchCard
@@ -58,13 +68,13 @@ export default function (props: {
       ></SearchCard>
       <div
         id="nav"
-        className=" bg-white sticky top-0 dark:bg-dark nav-shadow dark:nav-shadow-dark"
+        className={`nav-glass sticky top-0 nav-scroll-line ${scrolled ? "scrolled" : ""}`}
         style={{ zIndex: 90 }}
       >
         {/* 上面的导航栏 */}
         <div
-          className=" flex  items-center w-full border-b border-gray-200 h-14 dark:border-nav-dark"
-          style={{ height: 56 }}
+          className=" flex  items-center w-full border-b h-14"
+          style={{ height: 56, borderColor: 'var(--border-light)' }}
         >
           <div className="mx-4 flex items-center">
             <div
@@ -108,7 +118,7 @@ export default function (props: {
           </div>
           {props.headerLeftContent == "siteName" && (
             <Link href="/">
-              <div className="text-gray-800 cursor-pointer select-none text-lg dark:text-dark lg:text-xl font-medium  mr-4 hidden md:block">
+              <div className="cursor-pointer select-none text-lg lg:text-xl font-medium  mr-4 hidden md:block" style={{ color: 'var(--text-primary)' }}>
                 {props.siteName}
               </div>
             </Link>
@@ -169,7 +179,7 @@ export default function (props: {
           </div>
         </div>
         {Boolean(props.categories.length) && props.showSubMenu == "true" && (
-          <div className="h-10 items-center hidden md:flex border-b border-gray-200 dark:border-nav-dark overflow-hidden">
+          <div className="h-10 items-center hidden md:flex border-b overflow-hidden" style={{ borderColor: 'var(--border-light)' }}>
             <div
               className="mx-5"
               style={{ width: 52 + props.subMenuOffset }}

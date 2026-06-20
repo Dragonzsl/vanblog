@@ -1,6 +1,71 @@
 :root {
-  --theme-color: #1772b4;
-  --text-color-normal: #374151;
-  --text-color-sm: rgb(107, 114, 128);
-  --text-color-xs: rgb(156, 163, 175);
+  --bg-primary: #e8f4f8;
+  --bg-card: #f2f8f8;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-glass-border: rgba(255, 255, 255, 0.3);
+  --bg-code-block: #f8fafc;
+  --accent: #00b4d8;
+  --accent-deep: #0077b6;
+  --accent-glow: rgba(0, 180, 216, 0.2);
+  --accent-soft: rgba(0, 180, 216, 0.08);
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-placeholder: #94a3b8;
+  --border-light: #e2e8f0;
+  --border-accent: rgba(0, 180, 216, 0.3);
+  --shadow-card: 0 2px 16px rgba(0, 180, 216, 0.12);
+  --shadow-card-hover: 0 8px 32px rgba(0, 180, 216, 0.2);
+  --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --nav-line: linear-gradient(90deg, transparent, #00b4d8, #0077b6, #00b4d8, transparent);
+  --scrollbar-thumb: #b0c4d8;
+  --scrollbar-track: rgba(0, 180, 216, 0.05);
+  --waline-bg: #fff;
+  --code-lang-bg: #00b4d8;
+  --code-lang-text: #ffffff;
+  --code-copy-bg: rgba(0, 180, 216, 0.1);
+  --code-copy-hover: rgba(0, 180, 216, 0.25);
+  --sakura-color: rgba(0, 180, 216, 0.4);
+  --sakura-color-2: rgba(0, 119, 182, 0.3);
+  --sakura-color-3: rgba(0, 180, 216, 0.2);
+}
+
+.dark {
+  --bg-primary: #0a1628;
+  --bg-card: #132337;
+  --bg-glass: rgba(10, 22, 40, 0.8);
+  --bg-glass-border: rgba(0, 229, 160, 0.12);
+  --bg-code-block: #0e1b2e;
+  --accent: #00e5a0;
+  --accent-deep: #00c488;
+  --accent-glow: rgba(0, 229, 160, 0.15);
+  --accent-soft: rgba(0, 229, 160, 0.06);
+  --text-primary: #cbd5e1;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  --text-placeholder: #475569;
+  --border-light: #1e3850;
+  --border-accent: rgba(0, 229, 160, 0.25);
+  --shadow-card: 0 2px 16px rgba(0, 229, 160, 0.06);
+  --shadow-card-hover: 0 8px 32px rgba(0, 229, 160, 0.12);
+  --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --nav-line: linear-gradient(90deg, transparent, #00e5a0, #00c488, #00e5a0, transparent);
+  --scrollbar-thumb: #2a4a6a;
+  --scrollbar-track: rgba(0, 229, 160, 0.04);
+  --waline-bg: #132337;
+  --code-lang-bg: #00e5a0;
+  --code-lang-text: #0a1628;
+  --code-copy-bg: rgba(0, 229, 160, 0.12);
+  --code-copy-hover: rgba(0, 229, 160, 0.35);
+  --sakura-color: rgba(0, 229, 160, 0.3);
+  --sakura-color-2: rgba(0, 196, 136, 0.25);
+  --sakura-color-3: rgba(0, 229, 160, 0.12);
+}
+
+html {
+  background-color: var(--bg-primary);
+}
+
+html.dark {
+  background-color: var(--bg-primary);
 }

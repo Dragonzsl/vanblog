@@ -1,23 +1,21 @@
 .light pre .code-block-wrapper {
   display: block;
   overflow-x: auto;
-  padding: 22px 16px 16px;
+  padding: 34px 16px 16px;
+  border-radius: 1rem;
+  background: var(--bg-code-block);
 }
-
-/* .light code.hljs {
-  padding: 3px 5px
-}
-*/
 
 .light .hljs {
   background: inherit;
-  color: #000
+  color: #1e293b
 }
 
 .light .hljs-comment,
 .light .hljs-quote,
 .light .hljs-variable {
-  color: green
+  color: #64748b;
+  font-style: italic;
 }
 
 .light .hljs-built_in,
@@ -25,7 +23,7 @@
 .light .hljs-name,
 .light .hljs-selector-tag,
 .light .hljs-tag {
-  color: #00f
+  color: #0077b6
 }
 
 .light .hljs-addition,
@@ -37,7 +35,7 @@
 .light .hljs-template-variable,
 .light .hljs-title,
 .light .hljs-type {
-  color: #a31515
+  color: #0096c7
 }
 
 .light .hljs-deletion,
@@ -48,17 +46,17 @@
 }
 
 .light .hljs-doctag {
-  color: grey
+  color: #64748b
 }
 
 .light .hljs-attr {
-  color: red
+  color: #005f99
 }
 
 .light .hljs-bullet,
 .light .hljs-link,
 .light .hljs-symbol {
-  color: #00b0e8
+  color: #00b4d8
 }
 
 .light .hljs-emphasis {

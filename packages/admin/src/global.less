@@ -97,14 +97,14 @@ ol {
 }
 
 .dark-switch[aria-checked='true'] {
-  background: rgb(23, 114, 180);
+  background: rgb(0, 180, 216);
   .ant-switch-handle::before {
-    background-color: rgb(36, 37, 37);
+    background-color: rgb(26, 39, 54);
   }
 }
 
 body .dark-switch {
-  background: black;
+  background: #334155;
   .ant-switch-handle::before {
     background-color: rgb(162 162 162);
   }
@@ -183,11 +183,98 @@ body .ant-page-header-heading-title {
     background-color: #f5f5f5;
   }
 }
+
+/* ===== Ant Design Theme Overrides ===== */
+body {
+  --admin-bg: #eef4f8;
+  --admin-card-bg: #ffffff;
+  --admin-layout-bg: #eef4f8;
+  --admin-header-bg: rgba(255, 255, 255, 0.8);
+  --admin-accent: #00b4d8;
+  --admin-accent-soft: rgba(0, 180, 216, 0.08);
+  --admin-border: #e8edf2;
+  --admin-text: #1e293b;
+  --admin-text-secondary: #475569;
+}
+
+body .ant-pro-layout .ant-pro-layout-container .ant-pro-layout-bg-list {
+  background: var(--admin-bg);
+}
+
+.ant-pro-layout .ant-layout {
+  background: var(--admin-layout-bg) !important;
+}
+
+.ant-pro-layout .ant-layout-header {
+  background: var(--admin-header-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.ant-pro-layout .ant-pro-sider {
+  background: var(--admin-card-bg) !important;
+}
+
+.ant-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 180, 216, 0.06) !important;
+  transition: all 0.3s ease !important;
+}
+.ant-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.12) !important;
+}
+
+.ant-pro-card {
+  border-radius: 12px !important;
+}
+
+.ant-table {
+  border-radius: 12px !important;
+}
+
+.ant-btn-primary {
+  background: var(--admin-accent) !important;
+  border-color: var(--admin-accent) !important;
+  box-shadow: 0 2px 8px rgba(0, 180, 216, 0.2) !important;
+}
+.ant-btn-primary:hover {
+  filter: brightness(1.1) !important;
+  box-shadow: 0 4px 16px rgba(0, 180, 216, 0.3) !important;
+}
+
+/* ===== Dark mode overrides ===== */
+body .ant-pro-layout.ant-pro-layout-dark {
+  --admin-bg: #0a1628;
+  --admin-card-bg: #132337;
+  --admin-layout-bg: #0a1628;
+  --admin-header-bg: rgba(10, 22, 40, 0.85);
+  --admin-accent: #00e5a0;
+  --admin-accent-soft: rgba(0, 229, 160, 0.08);
+  --admin-border: #1e3850;
+  --admin-text: #cbd5e1;
+  --admin-text-secondary: #94a3b8;
+}
+
+body .ant-pro-layout.ant-pro-layout-dark .ant-layout-header {
+  border-bottom-color: var(--admin-border);
+}
+
+body .ant-pro-layout.ant-pro-layout-dark .ant-card {
+  box-shadow: 0 2px 12px rgba(0, 229, 160, 0.04) !important;
+}
+body .ant-pro-layout.ant-pro-layout-dark .ant-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 229, 160, 0.08) !important;
+}
+
+body .ant-pro-layout.ant-pro-layout-dark .ant-btn-primary {
+  box-shadow: 0 2px 8px rgba(0, 229, 160, 0.15) !important;
+}
+
 /* 滚动槽 */
 ::-webkit-scrollbar {
   width: 10px;
   height: 6px;
-  // border-radius: 4px;
 }
 ::-webkit-scrollbar-track {
   border-radius: 2px;
@@ -196,7 +283,7 @@ body .ant-page-header-heading-title {
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
-  background: #d7d7d7;
+  background: #b0c4d8;
 }
 .card-body-full {
   .ant-card-body {

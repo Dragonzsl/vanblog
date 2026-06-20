@@ -1,7 +1,7 @@
 const Settings = {
   navTheme: 'light',
-  // 明青色
-  primaryColor: '#1772B4',
+  // 青蓝色
+  primaryColor: '#00b4d8',
   layout: 'side',
   contentWidth: 'Fixed',
   // contentWidth: 'Fluid',
